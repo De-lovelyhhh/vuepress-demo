@@ -1,0 +1,75 @@
+{
+  "name": "egg-syllabus-framework",
+  "version": "1.0.35",
+  "description": "汕大课程表egg框架",
+  "egg": {
+    "framework": "egg-syllabus-framework"
+  },
+  "dependencies": {
+    "egg": "^2.3.0",
+    "egg-scripts": "^2.5.0",
+    "egg-sequelize": "^4.2.0",
+    "egg-validate": "^2.0.2",
+    "mysql2": "^1.6.4",
+    "oauth2-server": "^3.0.1",
+    "shortid": "^2.2.14",
+    "vuepress": "^0.14.10",
+    "webpack-dev-middleware": "^3.6.0"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.4.0",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.14.0",
+    "egg-view-nunjucks": "^2.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-alloy": "^1.4.2",
+    "eslint-config-egg": "^7.0.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "resolutions": {
+    "webpack-dev-middleware": "3.6.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && egg-bin pkgfiles --check && npm run cov",
+    "autod": "autod",
+    "pkgfiles": "egg-bin pkgfiles",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "ci": {
+    "version": "8, 9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.code.tencent.com/candyTong/egg-syllabus-framework"
+  },
+  "keywords": [
+    "egg",
+    "egg-framework"
+  ],
+  "author": "",
+  "files": [
+    "app",
+    "config",
+    "lib",
+    "index.js",
+    "app.js"
+  ],
+  "eslintIgnore": [
+    "coverage",
+    "dist"
+  ],
+  "license": "MIT",
+  "directories": {
+    "doc": "docs"
+  }
+}
